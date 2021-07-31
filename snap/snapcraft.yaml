@@ -17,5 +17,5 @@
   parts:
     build-gridbi:
       # See 'snapcraft plugins'
-      plugin: make
+      plugin: autotools
       build-packages: [gcc]
