@@ -1,6 +1,6 @@
 
   # After registering a name on build.snapcraft.io, commit an uncommented line:
-  # name: grisbi-git
+  name: grisbi-git
   version: '2.0.4'
   summary: Grisbi Finance Manager
   description: |
