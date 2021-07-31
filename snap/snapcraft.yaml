@@ -18,4 +18,4 @@
     build-grisbi:
       # See 'snapcraft plugins'
       plugin: autotools
-      build-packages: [gcc, libgsf-1-dev, libglib2.0-dev]
+      build-packages: [gcc, libgsf-1-dev, libglib2.0-dev, intltool]
