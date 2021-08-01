@@ -1,21 +1,30 @@
+# After registering a name on build.snapcraft.io, commit an uncommented line:
+name: grisbi-git
+base: core20
+version: '2.0.4'
+summary: Grisbi Finance Manager
+description: |
+  Grisbi is a free personal accounting software.
 
-  # After registering a name on build.snapcraft.io, commit an uncommented line:
-  name: grisbi-git
-  version: '2.0.4'
-  summary: Grisbi Finance Manager
-  description: |
-    Grisbi is a free personal accounting software.
+  Grisbi provides novice users a simple to use program that requires little or no 
+  reading of documentation, while allowing advanced users more advanced use by 
+  reading the manual (entirely in French). It is presented as "personal accounting",
+  but is particularly suited to small and medium-sized associations.
 
-    Grisbi provides novice users a simple to use program that requires little or no 
-    reading of documentation, while allowing advanced users more advanced use by 
-    reading the manual (entirely in French). It is presented as "personal accounting",
-    but is particularly suited to small and medium-sized associations.
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
 
-  grade: devel # must be 'stable' to release into candidate/stable channels
-  confinement: devmode # use 'strict' once you have the right plugs and slots
+architectures:
+  - build-on: amd64
+  #  - build-on: s390x
+  #  - build-on: ppc64el
+  #  - build-on: arm64
+  #  - build-on: armhf
+  #  - build-on: amd64
+  #  - build-on: i386
 
-  parts:
-    build-grisbi:
-      # See 'snapcraft plugins'
-      plugin: autotools
-      build-packages: [gcc, libgsf-1-dev, libglib2.0-dev, intltool, libgtk-4-dev]
+parts:
+  build-grisbi:
+    # See 'snapcraft plugins'
+    plugin: autotools
+    build-packages: [gcc, libgsf-1-dev, libglib2.0-dev, intltool, libgtk-3-dev]
